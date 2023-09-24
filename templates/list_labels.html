@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Labels</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>List of Labels</h1>
+    <ul>
+        {% for label in labels %}
+        <li><a href="/items/{{ label }}">{{ label }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
