@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Items with Label: {{ label }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Items with Label: {{ label }}</h1>
+    <ul>
+        {% for item in items %}
+        <li>
+            <h2>{{ item.name }}</h2>
+            <p>Phone: {{ item.phone }}</p>
+            <p>Images:</p>
+            <ul>
+                {% for image_url in item.images %}
+                <li><img src="{{ url_for('static', filename=image_url) }}" alt="Image"></li>
+                {% endfor %}
+            </ul>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
