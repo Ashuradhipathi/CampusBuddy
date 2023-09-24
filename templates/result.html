@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Detection Results</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object Detection Results</h1>
+
+    <!-- Display the uploaded image -->
+    <img src="{{ url_for('static', filename=image.filename) }}" alt="Uploaded Image" />
+
+    <h2>Detections:</h2>
+    <ul>
+        {% for detection in detections %}
+        <li>
+            <p>Label: {{ detection.label }}</p>
+            <p>Confidence: {{ detection.score }}</p>
+            <p>Bounding Box: {{ detection.box }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
