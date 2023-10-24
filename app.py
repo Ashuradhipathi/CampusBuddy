@@ -350,7 +350,7 @@ def create_FreeStuff(Title,Description,Image,Link):
     new_stuff = {
         "Title": Title,
         "Description": Description,
-        "image" : Image,
+        "Image" : Image,
         "Link": Link        
     }
     FreeStuff.insert_one(new_stuff)
@@ -360,7 +360,7 @@ def create_courses(Title,Description,Image,Link):
     new_course = {
         "Title": Title,
         "Description": Description,
-        "image" : Image,
+        "Image" : Image,
         "Link": Link        
     }
     Courses.insert_one(new_course)
