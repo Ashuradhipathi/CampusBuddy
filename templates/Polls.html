@@ -87,11 +87,14 @@
 </head>
 <body>
     <div class="menu-bar">
-        <a href="{{ url_for('notices') }}">Notice Board</a>
-        <a href="{{ url_for('Resources') }}">Resources</a>
-        <a href="{{ url_for('Courses') }}">Courses</a>
-        <a href="{{ url_for('Roadmaps') }}">Roadmaps</a>
-        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href="{{ url_for('admin') }}">Dashboard</a>
+        <a class="link" href="{{ url_for('notices') }}">Notice Board</a>
+        <a class="link" href="{{ url_for('Resources') }}">Resources</a>
+        <a class="link" href="{{ url_for('Courses') }}">Courses</a>
+        <a class="link" href="{{ url_for('Roadmaps') }}">Roadmaps</a>
+        <a class="link" href="{{ url_for('edu_assistant') }}">Edu Assistant</a>
+        <a class="link" href="{{ url_for('library') }}">Library</a>
+        <a class="link" href="{{ url_for('logout') }}">Logout</a>
     </div>
     <div class="container">
         <h1>Poll Page</h1>

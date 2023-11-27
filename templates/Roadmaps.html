@@ -6,10 +6,13 @@
 </head>
 <body>
     <div class="menu-bar">
+        <a href="{{ url_for('admin') }}">Dashboard</a>
         <a href="{{ url_for('notices') }}">Notice Board</a>
         <a href="{{ url_for('vote') }}">Vote</a>
         <a href="{{ url_for('Resources') }}">Resources</a>
         <a href="{{ url_for('Courses') }}">Roadmaps</a>
+        <a class="link" href="{{ url_for('edu_assistant') }}">Edu Assistant</a>
+        <a class="link" href="{{ url_for('library') }}">Library</a>
         <a href="{{ url_for('logout') }}">Logout</a>
     </div>
     
